@@ -408,7 +408,7 @@ Tab:AddToggle({
 	Name = "Gakuya",
 	Default = false,
 	Callback = function(Value)
-	  _G.autoGakuya = Values
+	  _G.autoGakuya = Value
    while _G.autoGakuya and wait() do
 local args = {
     [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
