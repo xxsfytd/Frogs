@@ -265,7 +265,7 @@ Tab:AddToggle({
 	Name = "Magma Egg",
 	Default = false,
 	Callback = function(Value)
-		_G.autoMagmaEgg
+		_G.autoMagmaEgg = Value
   while _G.autoMagmaEgg and wait() do
 local args = {
     [1] = "Hatch1",
