@@ -98,11 +98,6 @@ end
 	end    
 })
 
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
-end
-	end    
-})
-
 local Section = Tab:AddSection({
 	Name = "World 1"
 })
