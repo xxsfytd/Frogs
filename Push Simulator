@@ -61,7 +61,7 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddToggle({
-	Name = "15 Event Egg",
+	Name = "15M Event Egg",
 	Default = false,
 	Callback = function(Value)
 		_G.auto15MEgg = Value
