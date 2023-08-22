@@ -1,0 +1,171 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Push Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Main"
+})
+Tab:AddLabel("Help")
+Tab:AddLabel("1. If the auto boss bug your gui just fight any boss to fix it")
+
+local Tab = Window:MakeTab({
+	Name = "Auto Stuffs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "auto yes"
+})
+Tab:AddToggle({
+	Name = "Auto Click Power",
+	Default = false,
+	Callback = function(Value)
+		_G.autoPower = Value
+		while _G.autoPower and wait() do
+		game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("PowerGain"):FireServer()
+		end
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.autoRebirth = Value
+		while _G.autoRebirth and wait() do
+		game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rebirth"):FireServer()
+		end
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto Click Push Boss",
+	Default = false,
+	Callback = function(Value)
+		_G.autoPushBoss = Value
+		while _G.autoPushBoss and wait() do
+		game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("PushGain"):FireServer()
+		end
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Eggs"
+})
+Tab:AddToggle({
+	Name = "W1 Egg 1",
+	Default = false,
+	Callback = function(Value)
+		_G.autoW1 = Value
+		while _G.autoW1 and wait() do
+		local args = {
+    [1] = "Hatch1",
+    [2] = "Basic",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Auto Boss",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "W1"
+})
+Tab:AddLabel("DONT FORGET TO TURN ON AUTO CLICK PUSH BOSS")
+Tab:AddToggle({
+	Name = "Nerd",
+	Default = false,
+	Callback = function(Value)
+		_G.autoNerd = Value
+		while _G.autoNerd and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})    
+
+Tab:AddToggle({
+	Name = "Evil Professor",
+	Default = false,
+	Callback = function(Value)
+		_G.autoProfessor = Value
+		while _G.autoProfessor and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "The Witch",
+	Default = false,
+	Callback = function(Value)
+		_G.autoWitch = Value
+		while _G.autoWitch and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+ end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Purplex",
+	Default = false,
+	Callback = function(Value)
+		_G.autoPurplex = Value
+		while _G.autoPurplex and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Daang Son",
+	Default = false,
+	Callback = function(Value)
+		_G.autoDaang = Value
+		while _G.autoDaang and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Forest"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+
+
+
+OrionLib:Init()
