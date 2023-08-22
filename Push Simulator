@@ -115,7 +115,7 @@ end
 })
 
 Tab:AddToggle({
-	Name = "This is a toggle!",
+	Name = "Lava Egg",
 	Default = false,
 	Callback = function(Value)
 		_G.autoLavaEgg = Value
@@ -175,7 +175,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "W1"
+	Name = "World 1"
 })
 Tab:AddLabel("DONT FORGET TO TURN ON AUTO CLICK PUSH BOSS")
 Tab:AddToggle({
