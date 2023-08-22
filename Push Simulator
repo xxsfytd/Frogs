@@ -80,7 +80,7 @@ Tab:AddToggle({
 	Name = "Devious Egg",
 	Default = false,
 	Callback = function(Value)
-		_G.autoDeviousEgg
+		_G.autoDeviousEgg = Value
 		while _G.autoDeviousEgg and wait() do
 		local args = {
     [1] = "Hatch1",
@@ -96,7 +96,7 @@ end
 Tab:AddButton({
 	Name = "Lava Egg",
 	Callback = function()
-      		_G.autoLavaEgg
+      		_G.autoLavaEgg = Value
       		while _G.autoLavaEgg and wait() do
       		local args = {
     [1] = "Hatch1",
