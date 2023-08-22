@@ -2,7 +2,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Push Simulator", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 OrionLib:MakeNotification({
 	Name = "Welcome!",
-	Content = "Frogs are tbe best am i right?",
+	Content = "Hope this script made by ImAFrogWithSmallEyesButBigBody#6202 helps you.",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
