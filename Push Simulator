@@ -7,7 +7,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
-	Name = "Main"
+	Name = "Main/Help"
 })
 Tab:AddLabel("Help")
 Tab:AddLabel("1. If the auto boss bug your gui just fight any boss to fix it")
