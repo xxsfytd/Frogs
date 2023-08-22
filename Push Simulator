@@ -72,27 +72,6 @@ Tab:AddToggle({
     [3] = {}
 }
 
-local Section = Tab:AddSection({
-	Name = "Huge"
-})
-
-Tab:AddToggle({
-	Name = "Huge Meme Cat",
-	Default = false,
-	Callback = function(Value)
-		_G.autoHugeMemeCat = Value
-		while _G.autoHugeMemeCat and wait() do
-	local args = {
-    [1] = "Hatch1",
-    [2] = "Lava",
-    [3] = {
-        ["Dino"] = true,
-        ["Parrot"] = true,
-        ["Memecat"] = true,
-        ["Elephant"] = true
-    }
-}
-
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
 end
 	end    
@@ -136,12 +115,12 @@ end
 })
 
 Tab:AddToggle({
-	Name = "Lava Egg",
+	Name = "This is a toggle!",
 	Default = false,
 	Callback = function(Value)
 		_G.autoLavaEgg = Value
-  while _G.autoLavaEgg and wait() do
-local args = {
+		while _G.autoLavaEgg and wait() do
+		local args = {
     [1] = "Hatch1",
     [2] = "Lava",
     [3] = {}
