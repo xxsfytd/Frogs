@@ -77,6 +77,11 @@ end
 	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Huge"
+})
+Tab:AddLabel("Auto Hatches Huges")
+
 Tab:AddToggle({
 	Name = "Huge Meme Cat",
 	Default = false,
