@@ -51,6 +51,11 @@ Tab:AddToggle({
 	end    
 })
 
+local Tab = Window:MakeTab({
+	Name = "Eggs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 local Section = Tab:AddSection({
 	Name = "World 1"
 })
@@ -199,6 +204,18 @@ end
 	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "World 2"
+})
+
+Tab:AddToggle({
+	Name = "",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Teleport",
 	Icon = "rbxassetid://4483345998",
@@ -206,6 +223,91 @@ local Tab = Window:MakeTab({
 })
 local Section = Tab:AddSection({
 	Name = "Machines"
+})
+
+Tab:AddToggle({
+	Name = "Jack",
+	Default = false,
+	Callback = function(Value)
+		_G.autoJack = Value
+		while _G.Jack and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Shipper",
+	Default = false,
+	Callback = function(Value)
+		_G.autoShipper
+		while _G.autoShipper and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Captain Notooth",
+	Default = false,
+	Callback = function(Value)
+		_G.autoNotooth = Value
+		while _G.autoNotooth and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Barito",
+	Default = false,
+	Callback = function(Value)
+		_G.autoBarito = Value
+		while _G.autoBarito and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Soulcard",
+	Default = false,
+	Callback = function(Value)
+		_G.autoSoulcard = Value
+		while _G.autoSoulcard and wait() do
+		local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+
+	end    
 })
 
 Tab:AddButton({
