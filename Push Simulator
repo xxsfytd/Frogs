@@ -244,6 +244,40 @@ local Section = Tab:AddSection({
 	Name = "World 3"
 })
 
+Tab:AddToggle({
+	Name = "Icy Egg",
+	Default = false,
+	Callback = function(Value)
+		_G.autoIcyEgg = Value
+  while _G.autoIcyEgg and with() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Icey",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Magma Egg",
+	Default = false,
+	Callback = function(Value)
+		_G.autoMagmaEgg
+  while _G.autoMagmaEgg and wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Magma",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Auto Boss",
 	Icon = "rbxassetid://4483345998",
