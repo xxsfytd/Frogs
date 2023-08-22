@@ -400,6 +400,95 @@ end
 	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "World 3"
+})
+
+Tab:AddToggle({
+	Name = "Gakuya",
+	Default = false,
+	Callback = function(Value)
+	  _G.autoGakuya = Values
+   while _G.autoGakuya and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Tezu",
+	Default = false,
+	Callback = function(Value)
+		_G.autoTezu = Value
+  while _G.autoTezu and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Kindo",
+	Default = false,
+	Callback = function(Value)
+		_G.autoKindo = Value
+  while _G.autoKindo and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Gogo Sane",
+	Default = false,
+	Callback = function(Value)
+		_G.autoGogo = Value
+  while _G.autoGogo and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "One Push Man",
+	Default = false,
+	Callback = function(Value)
+		_G.autoPushMan = Value
+  while _G.autoPushMan and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Teleport",
 	Icon = "rbxassetid://4483345998",
