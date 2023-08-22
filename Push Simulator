@@ -72,6 +72,32 @@ Tab:AddToggle({
     [3] = {}
 }
 
+local Section = Tab:AddSection({
+	Name = "Huge"
+})
+
+Tab:AddToggle({
+	Name = "Huge Meme Cat",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHugeMemeCat
+		while _G.autoHugeMemeCat and wait() do
+		local args = {
+    [1] = "Hatch1",
+    [2] = "Lava",
+    [3] = {
+        ["Dino"] = true,
+        ["Parrot"] = true,
+        ["Memecat"] = true,
+        ["Elephant"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
 end
 	end    
@@ -114,13 +140,12 @@ end
 	end    
 })
 
-Tab:AddToggle({
+Tab:AddButton({
 	Name = "Lava Egg",
-	Default = false,
-	Callback = function(Value)
-		_G.autoLavaEgg = Value
-                while _G.autoLavaEgg and wait() do
-                local args = {
+	Callback = function()
+      		_G.autoLavaEgg = Value
+      		while _G.autoLavaEgg and wait() do
+      		local args = {
     [1] = "Hatch1",
     [2] = "Lava",
     [3] = {}
@@ -128,7 +153,7 @@ Tab:AddToggle({
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
 end
-	end    
+  	end    
 })
 
 local Section = Tab:AddSection({
@@ -397,5 +422,3 @@ Tab:AddButton({
 
 
 OrionLib:Init()
-
--- cheese
