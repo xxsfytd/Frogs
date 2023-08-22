@@ -80,7 +80,7 @@ Tab:AddToggle({
 	Name = "Huge Meme Cat",
 	Default = false,
 	Callback = function(Value)
-		_G.autoHugeMemeCat
+		_G.autoHugeMemeCat = Value
 		while _G.autoHugeMemeCat and wait() do
 		local args = {
     [1] = "Hatch1",
