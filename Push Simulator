@@ -82,7 +82,7 @@ Tab:AddToggle({
 	Callback = function(Value)
 		_G.autoHugeMemeCat = Value
 		while _G.autoHugeMemeCat and wait() do
-		local args = {
+	local args = {
     [1] = "Hatch1",
     [2] = "Lava",
     [3] = {
