@@ -132,6 +132,28 @@ end
 	end    
 })
 
+Tab:AddToggle({
+	Name = "3rd Huge",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHuge3 = Value
+  while _G.autoHuge3 and wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Magma",
+    [3] = {
+        ["Monkey"] = true,
+        ["Chef Mouse"] = true,
+        ["French Pet"] = true,
+        ["Fox"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
 local Section = Tab:AddSection({
 	Name = "World 1"
 })
