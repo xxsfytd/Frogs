@@ -77,6 +77,28 @@ end
 	end    
 })
 
+Tab:AddToggle({
+	Name = "Huge Meme Cat",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHugeMemeCat = Value
+  while _G.autoHugeMemeCat and wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Lava",
+    [3] = {
+        ["Dino"] = true,
+        ["Parrot"] = true,
+        ["Memecat"] = true,
+        ["Elephant"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
 local Section = Tab:AddSection({
 	Name = "World 1"
 })
