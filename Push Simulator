@@ -109,7 +109,7 @@ Tab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		_G.autoHuge2 = Value
-  while _G.autiHuge2 and wait() do
+  while _G.autoHuge2 and wait() do
 local args = {
     [1] = "Hatch1",
     [2] = "Viking",
