@@ -192,6 +192,13 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "World 2",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(586, 804, -123)
+  	end    
+})
+
 
 
 
