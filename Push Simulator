@@ -57,6 +57,27 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 local Section = Tab:AddSection({
+	Name = "Events"
+})
+
+Tab:AddToggle({
+	Name = "15 Event Egg",
+	Default = false,
+	Callback = function(Value)
+		_G.auto15MEgg = Value
+		while _G.auto15MEgg and wait() do
+		local args = {
+    [1] = "Hatch1",
+    [2] = "15M",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
+local Section = Tab:AddSection({
 	Name = "World 1"
 })
 Tab:AddToggle({
