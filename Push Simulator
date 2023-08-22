@@ -246,7 +246,7 @@ Tab:AddToggle({
 	Name = "Shipper",
 	Default = false,
 	Callback = function(Value)
-		_G.autoShipper
+		_G.autoShipper = Value
 		while _G.autoShipper and wait() do
 		local args = {
     [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
