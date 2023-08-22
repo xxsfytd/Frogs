@@ -139,7 +139,7 @@ Tab:AddToggle({
 	Name = "Lava Egg",
 	Default = false,
 	Callback = function(Value)
-		_G.autoLavaEgg= Value
+		_G.autoLavaEgg = Value
   while _G.autoLavaEgg and wait() do
 local args = {
     [1] = "Hatch1",
