@@ -165,6 +165,32 @@ end
 	end    
 })
 
+local Tab = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Machines"
+})
+
+Tab:AddButton({
+	Name = "Golden Machine",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-46, 4, -6)
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Worlds"
+})
+
+Tab:AddButton({
+	Name = "World 1",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39, 4, -19)
+  	end    
+})
 
 
 
