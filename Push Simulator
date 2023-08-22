@@ -140,12 +140,13 @@ end
 	end    
 })
 
-Tab:AddButton({
+Tab:AddToggle({
 	Name = "Lava Egg",
-	Callback = function()
-      		_G.autoLavaEgg = Value
-      		while _G.autoLavaEgg and wait() do
-      		local args = {
+	Default = false,
+	Callback = function(Value)
+		_G.autoLavaEgg= Value
+  while _G.autoLavaEgg and wait() do
+local args = {
     [1] = "Hatch1",
     [2] = "Lava",
     [3] = {}
@@ -153,7 +154,7 @@ Tab:AddButton({
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
 end
-  	end    
+	end    
 })
 
 local Section = Tab:AddSection({
