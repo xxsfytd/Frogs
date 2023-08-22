@@ -77,6 +77,43 @@ end
 })
 
 Tab:AddToggle({
+	Name = "Devious Egg",
+	Default = false,
+	Callback = function(Value)
+		_G.autoDeviousEgg
+		while _G.autoDeviousEgg and wait() do
+		local args = {
+    [1] = "Hatch1",
+    [2] = "Devious",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddButton({
+	Name = "Lava Egg",
+	Callback = function()
+      		_G.autoLavaEgg
+      		while _G.autoLavaEgg and wait() do
+      		local args = {
+    [1] = "Hatch1",
+    [2] = "Lava",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "World 2"
+})
+
+Tab:AddToggle({
 	Name = "Pirate Egg",
 	Default = false,
 	Callback = function(Value)
@@ -305,6 +342,13 @@ Tab:AddButton({
 	Name = "Golden Machine",
 	Callback = function()
       		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-46, 4, -6)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Upgrade Machine",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-106, 7, -46)
   	end    
 })
 
