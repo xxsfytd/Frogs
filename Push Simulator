@@ -212,7 +212,7 @@ Tab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		_G.autoJack = Value
-		while _G.Jack and wait() do
+		while _G.autoJack and wait() do
 		local args = {
     [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Beach"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
     [2] = 5.373063564300537,
