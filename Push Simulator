@@ -207,24 +207,6 @@ end
 local Section = Tab:AddSection({
 	Name = "World 2"
 })
-
-Tab:AddToggle({
-	Name = "",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end    
-})
-
-local Tab = Window:MakeTab({
-	Name = "Teleport",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-local Section = Tab:AddSection({
-	Name = "Machines"
-})
-
 Tab:AddToggle({
 	Name = "Jack",
 	Default = false,
@@ -308,6 +290,15 @@ Tab:AddToggle({
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
 end
 	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Machines"
 })
 
 Tab:AddButton({
