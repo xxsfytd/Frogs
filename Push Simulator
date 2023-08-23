@@ -284,16 +284,18 @@ end
 	end    
 })
 
-
 local Tab = Window:MakeTab({
 	Name = "Auto Boss",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+
 local Section = Tab:AddSection({
 	Name = "World 1"
 })
+
 Tab:AddLabel("DONT FORGET TO TURN ON AUTO CLICK PUSH BOSS")
+
 Tab:AddToggle({
 	Name = "Nerd",
 	Default = false,
