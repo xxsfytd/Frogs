@@ -284,27 +284,6 @@ end
 	end    
 })
 
-local Section = Tab:AddSection({
-	Name = "World 4"
-})
-
-Tab:AddToggle({
-	Name = "Ancient Egg",
-	Default = false,
-	Callback = function(Value)
-		_G.autoAncientEgg = Value
-  while _G.autoAncientEgg and wait() do
-local args = {
-    [1] = "Hatch1",
-    [2] = "Ancient",
-    [3] = {}
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
-end
-	end    
-})
-
 local Tab = Window:MakeTab({
 	Name = "Auto Boss",
 	Icon = "rbxassetid://4483345998",
@@ -618,7 +597,7 @@ Tab:AddToggle({
 	Name = "Mystic Warrior",
 	Default = false,
 	Callback = function(Value)
-		_G.autoMystic = Value
+	 _G.autoMystic = Value
   while _G.autoMystic and wait() do
 local args = {
     [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
