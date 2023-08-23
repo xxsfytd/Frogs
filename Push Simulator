@@ -154,6 +154,29 @@ end
 	end    
 })
 
+Tab:AddToggle({
+	Name = "4th Huge",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHuge4 = Value
+  while _G.autoHuge4 and wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Egypt",
+    [3] = {
+        ["Mummy"] = true,
+        ["Sphinx"] = true,
+        ["Horus"] = true,
+        ["Anubis"] = true,
+        ["Sphinx Dragon"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
 local Section = Tab:AddSection({
 	Name = "World 1"
 })
@@ -276,6 +299,44 @@ Tab:AddToggle({
 local args = {
     [1] = "Hatch1",
     [2] = "Magma",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "World 4"
+})
+
+Tab:AddToggle({
+	Name = "Ancient Egg",
+	Default = false,
+	Callback = function(Value)
+		_G.autoAncientEgg
+  while _G.autoAncientEgg and wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Ancient",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Egypt Egg",
+	Default = false,
+	Callback = function(Value)
+		_G.autoEgyptEgg = Value
+  while _G.autoEgyptEgg and wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Egypt",
     [3] = {}
 }
 
@@ -546,6 +607,95 @@ Tab:AddToggle({
   while _G.autoPushMan and wait() do
 local args = {
     [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Lava"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "World 4"
+})
+
+Tab:AddToggle({
+	Name = "Mummy",
+	Default = false,
+	Callback = function(Value)
+		_G.autoMummy = Value
+  while _G.autoMummy and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_1"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Sekhmet",
+	Default = false,
+	Callback = function(Value)
+  _G.autoSekhmet = Value
+  while _G.autoSekhmet and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_2"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Mystic Warrior",
+	Default = false,
+	Callback = function(Value)
+		_G.autoMystic = Value
+  while _G.autoMystic and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_3"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Anubis",
+	Default = false,
+	Callback = function(Value)
+		_G.autoAnubis = Value
+  while _G.autoAnubis and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_4"):WaitForChild("Spawner"),
+    [2] = 5.373063564300537,
+    [3] = "Simulate"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Push"):FireServer(unpack(args))
+end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "The Pharaoh",
+	Default = false,
+	Callback = function(Value)
+	 _G.autoPharaoh = Value
+  while _G.autoPharaoh and wait() do
+local args = {
+    [1] = workspace:WaitForChild("Map"):WaitForChild("Worlds"):WaitForChild("Ancient"):WaitForChild("Levels"):WaitForChild("Level_5"):WaitForChild("Spawner"),
     [2] = 5.373063564300537,
     [3] = "Simulate"
 }
