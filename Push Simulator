@@ -315,7 +315,7 @@ Tab:AddToggle({
 	Name = "Ancient Egg",
 	Default = false,
 	Callback = function(Value)
-		_G.autoAncientEgg
+		_G.autoAncientEgg = Value
   while _G.autoAncientEgg and wait() do
 local args = {
     [1] = "Hatch1",
