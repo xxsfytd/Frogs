@@ -154,29 +154,6 @@ end
 	end    
 })
 
-Tab:AddToggle({
-	Name = "4th Huge",
-	Default = false,
-	Callback = function(Value)
-		_G.autoHuge4 = Value
-  while _G.autoHuge4 and wait() do
-local args = {
-    [1] = "Hatch1",
-    [2] = "Egypt",
-    [3] = {
-        ["Mummy"] = true,
-        ["Sphinx"] = true,
-        ["Horus"] = true,
-        ["Anubis"] = true,
-        ["Sphinx Dragon"] = true
-    }
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
-end
-	end    
-})
-
 local Section = Tab:AddSection({
 	Name = "World 1"
 })
@@ -307,43 +284,6 @@ end
 	end    
 })
 
-local Section = Tab:AddSection({
-	Name = "World 4"
-})
-
-Tab:AddToggle({
-	Name = "Ancient Egg",
-	Default = false,
-	Callback = function(Value)
-		_G.autoAncientEgg = Value
-  while _G.autoAncientEgg and wait() do
-local args = {
-    [1] = "Hatch1",
-    [2] = "Ancient",
-    [3] = {}
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
-end
-	end    
-})
-
-Tab:AddToggle({
-	Name = "Egypt Egg",
-	Default = false,
-	Callback = function(Value)
-		_G.autoEgyptEgg = Value
-  while _G.autoEgyptEgg and wait() do
-local args = {
-    [1] = "Hatch1",
-    [2] = "Egypt",
-    [3] = {}
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
-end
-	end    
-})
 
 local Tab = Window:MakeTab({
 	Name = "Auto Boss",
