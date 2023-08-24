@@ -305,6 +305,23 @@ end
 	end    
 })
 
+Tab:AddToggle({
+	Name = "Egypt Egg",
+	Default = false,
+	Callback = function(Value)
+		_G.autoEgyptEgg = Value
+  while _G.autoEgyptEgg and wait() do
+local args = {
+    [1] = "Hatch1",
+    [2] = "Egypt",
+    [3] = {}
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Hatch"):FireServer(unpack(args))
+end
+	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Auto Boss",
 	Icon = "rbxassetid://4483345998",
