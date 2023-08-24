@@ -27,7 +27,7 @@ local Section = Tab:AddSection({
 	Name = "auto yes"
 })
 Tab:AddToggle({
-	Name = "Auto Click Power",
+	Name = "Auto Power",
 	Default = false,
 	Callback = function(Value)
 		_G.autoPower = Value
